@@ -1094,44 +1094,30 @@ https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js
             <div class="col-12">
 
                 <div class="location_row_shape">
-                    <div class="locations_row locations_scroller"><div style="width: 100000px; transform: translateX(0px); animation: 24.88s linear 1s infinite normal none running marqueeAnimation-8693082;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 20px; float: left;">
-                        <div class="group">
-                            <!--<div class="item">
-                                <h3>FUKO in EPSOM SOCIAL Food Hall</h3>
-                                <p class="content">UNIT 2, 1 The Derby Square, Epsom, KT19 8AG</p>
+<div class="marquee-container">
+    <div class="marquee">
+      <div class="marquee-content">
+        <div class="item">
+          <h3>Crystal Palace</h3>
+          <p class="content">64 Westow Hill, London, SE19 1RX</p>
+        </div>
+        <div class="item">
+          <h3>FUKO KOREA</h3>
+          <p class="content">64 Westow Hill, London, SE19 1RX</p>
+        </div>
 
-                            </div>-->
-                            <div class="item">
-                                <h3>Crystal Palace</h3>
-                                <p class="content">Crystal Palace: 64 Westow Hill, London, SE19 1RX</p>
-
-                            </div>
-                            <div class="item">
-                                <h4>FUKO KOREA</h4>
-                                <p class="content">64 Westow Hill, London, SE19 1RX</p>
-
-                            </div>
-                        </div>
-                    </div><div class="js-marquee" style="margin-right: 20px; float: left;">
-                        <div class="group">
-                           <!--<div class="item">
-                                <h3>FUKO in EPSOM SOCIAL Food Hall</h3>
-                                <p class="content">UNIT 2, 1 The Derby Square, Epsom, KT19 8AG</p>
-
-                            </div>-->
-                            <div class="item">
-                                <h3>Crystal Palace</h3>
-                                <p class="content">Crystal Palace: 64 Westow Hill, London, SE19 1RX</p>
-
-                            </div>
-                            <!-- <div class="item">
-                                <h4>FUKO KOREA</h4>
-                                <p class="content">UNIT 2, 1 The Derby Square, Epsom, KT19 8AG</p>
-
-                            </div> -->
-                        </div>
-                    </div></div></div>
-                </div>
+        <!-- Duplicate content to allow seamless scroll -->
+        <div class="item">
+          <h3>Crystal Palace</h3>
+          <p class="content">64 Westow Hill, London, SE19 1RX</p>
+        </div>
+        <div class="item">
+          <h3>FUKO KOREA</h3>
+          <p class="content">64 Westow Hill, London, SE19 1RX</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
             </div>
         </div>
@@ -1318,6 +1304,37 @@ https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js
         padding: 20px !important;
       }
     }
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  background: #f45804; /* Optional: background color */
+  padding: 10px 0;
+}
+
+.marquee {
+  white-space: nowrap;
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-content {
+  display: inline-flex;
+}
+
+.marquee-content .item {
+  display: inline-block;
+  margin-right: 50px; /* Space between items */
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}	  
   </style>
 </head>
 
