@@ -1039,11 +1039,7 @@ https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js
     </div>
 </div>
 <div id="">
-    <div id="Opening-times" style="padding: 40px; text-align: center;background-color:#050404 ;
-@media (max-width: 768px) {
-  #Opening-times h2 {
-    font-size: 28px;
-    line-height: 1.4;" >
+    <div id="Opening-times" style="padding: 40px; text-align: center;background-color:#050404 ;" >
         <h2>Opening Times</h2><br>
             <p> Sunday  - Monday   : 11:00 AM – 9:00  PM   </p>
             <p> Tuesday - Thursday : 11:00 AM – 10:00 PM   </p>
@@ -1307,7 +1303,23 @@ https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js
     	</div>
     </div>  
 	
-
+<head>
+  ...
+  <style>
+    @media (max-width: 768px) {
+      #Opening-times h2 {
+        font-size: 26px !important;
+        line-height: 1.5 !important;
+        word-break: break-word;
+        white-space: normal;
+        text-align: center;
+      }
+      #Opening-times {
+        padding: 20px !important;
+      }
+    }
+  </style>
+</head>
 
 
 </body></html>
