@@ -877,6 +877,27 @@
 	      e.preventDefault();
       });
    </script>
+
+	<script>
+$(document).ready(function () {
+
+    // Open mobile nav
+    $("#open_mobile_nav").on("click", function () {
+        $("#mobile_nav").show();
+    });
+
+    // Close when pressing X
+    $("#mobile_nav .btn_close").on("click", function () {
+        $("#mobile_nav").hide();
+    });
+
+    // Auto-close when clicking a link inside mobile nav
+    $("#mobile_nav a").on("click", function () {
+        $("#mobile_nav").hide();
+    });
+
+});
+</script>
 	
 </head>
 
